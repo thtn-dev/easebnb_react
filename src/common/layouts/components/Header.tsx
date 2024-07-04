@@ -1,18 +1,21 @@
-import useScroll from '@/common/hooks/use_scroll';
-import { Box, styled } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 
 const HeaderBox = styled(Box)({
-  height: "375rem",
-  width: 1,
-  position: "sticky",
+  height: '3.75rem',
+  width: "100%",
+  position: 'sticky',
   top: 0,
   zIndex: 100,
   left: 0,
+  boxShadow: '0 0.1rem 1rem rgba(0, 0, 0, 0.1)',
 });
 
 function Header() {
-  const scrolled = useScroll(20);
-  return <HeaderBox component="header"></HeaderBox>;
+  return (
+    <HeaderBox component="header">
+      <Typography variant="h5">Header</Typography>
+    </HeaderBox>
+  );
 }
 
 export default Header;

@@ -1,8 +1,9 @@
+import DefaultLayout from "./common/layouts/DefaultLayout";
+import Login from "./modules/auth/pages/Login";
+
 function App() {
   return (
-    <>
-      <h1>App</h1>
-    </>
+    <DefaultLayout><Login></Login></DefaultLayout>
   );
 }
 

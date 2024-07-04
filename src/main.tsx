@@ -1,7 +1,5 @@
 import 'sanitize.css';
-
-Promise.all([import('@/Root'), import('@/App')]).then(([{ default: render }, { default: App }]) => {
+Promise.all([import('@/Root'), import('@/AppWithErrorHandling')]).then(([{ default: render }, { default: App }]) => {
   render(App);
 });
-
 export {};
