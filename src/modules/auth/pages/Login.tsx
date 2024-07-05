@@ -1,5 +1,6 @@
 import { Avatar, Box } from "@mui/material";
 import authStore from "../auth-store";
+import { red } from "@mui/material/colors";
 
 function Login() {
   const login = authStore((state) => state.login);
@@ -11,7 +12,7 @@ function Login() {
     return names[Math.floor(Math.random() * names.length)];
   }
 
-  return ( <Box>
+  return ( <Box bgcolor={red[50]} height={"100vh"}>
     <h1>Login</h1>
     <button onClick={() => login(randomUserName(), "https://picsum.photos/300/300")}>Login</button>  
     <button onClick={() => logout()}>Logout</button>
